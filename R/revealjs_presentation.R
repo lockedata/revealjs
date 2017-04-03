@@ -253,7 +253,7 @@ revealjs_presentation <- function(incremental = FALSE,
 }
 
 revealjs_themes <- function() {
-  c("default",
+  c("lockedata","default",
     "dark",
     "simple",
     "sky",

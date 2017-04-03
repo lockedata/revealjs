@@ -7,6 +7,7 @@
 body {
 	@include bodyBackground();
 	background-color: $backgroundColor;
+	text-align: $textAlign;
 }
 
 .reveal {
@@ -17,6 +18,12 @@ body {
 }
 
 ::selection {
+	color: $selectionColor;
+	background: $selectionBackgroundColor;
+	text-shadow: none;
+}
+
+::-moz-selection {
 	color: $selectionColor;
 	background: $selectionBackgroundColor;
 	text-shadow: none;
@@ -52,10 +59,21 @@ body {
 	word-wrap: break-word;
 }
 
-.reveal h1 {font-size: $heading1Size; }
-.reveal h2 {font-size: $heading2Size; }
-.reveal h3 {font-size: $heading3Size; }
-.reveal h4 {font-size: $heading4Size; }
+.reveal h1 {
+	font-size: $heading1Size;
+	text-align: $textAlign; 
+	}
+.reveal h2 {
+	font-size: $heading2Size;
+	text-align: $textAlign; 
+	}
+.reveal h3 {
+	font-size: $heading3Size; 
+	text-align: $textAlign;
+	}
+.reveal h4 {font-size: $heading4Size; 
+	text-align: $textAlign;
+	}
 
 .reveal h1 {
 	text-shadow: $heading1TextShadow;
@@ -69,6 +87,7 @@ body {
 .reveal p {
 	margin: $blockMargin 0;
 	line-height: 1.3;
+	text-align: $textAlign;
 }
 
 /* Ensure certain elements are never larger than the slide itself */
@@ -90,7 +109,7 @@ body {
 .reveal ol,
 .reveal dl,
 .reveal ul {
-	display: inline-block;
+	display: block;
 
 	text-align: left;
 	margin: 0 0 0 1em;
@@ -136,12 +155,11 @@ body {
 .reveal blockquote {
 	display: block;
 	position: relative;
-	width: 70%;
+	width: $blockWidth;
 	margin: $blockMargin auto;
 	padding: 5px;
 
 	font-style: italic;
-	background: rgba(255, 255, 255, 0.05);
 	box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
 }
 	.reveal blockquote p:first-child,
@@ -156,11 +174,11 @@ body {
 .reveal pre {
 	display: block;
 	position: relative;
-	width: 90%;
+	width: $blockWidth;
 	margin: $blockMargin auto;
 
 	text-align: left;
-	font-size: 0.55em;
+	font-size: $preFontSize;
 	font-family: monospace;
 	line-height: 1.2em;
 
@@ -184,6 +202,7 @@ body {
 	margin: auto;
 	border-collapse: collapse;
 	border-spacing: 0;
+	background-color: $textBackgroundColor;
 }
 
 .reveal table th {
@@ -237,7 +256,7 @@ body {
 
 .reveal a {
 	color: $linkColor;
-	text-decoration: none;
+	text-decoration: $linkDecoration;
 
 	-webkit-transition: color .15s ease;
 	   -moz-transition: color .15s ease;
@@ -263,7 +282,7 @@ body {
 .reveal section img {
 	margin: 15px 0px;
 	background: rgba(255,255,255,0.12);
-	border: 4px solid $mainColor;
+	border: 4px none $mainColor;
 
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
@@ -344,3 +363,10 @@ body {
 	}
 
 
+.slides {
+	background-color: $textBackgroundColor;	
+	background-image: $backgroundImage;
+	background-position: left bottom; 
+	background-repeat: no-repeat;
+	padding: 20px;
+}

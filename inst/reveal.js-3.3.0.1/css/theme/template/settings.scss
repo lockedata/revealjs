@@ -41,3 +41,11 @@ $selectionColor: #fff;
 @mixin bodyBackground() {
 	background: $backgroundColor;
 }
+
+// Locke Data stuff
+$textAlign: left;
+$blockWidth: 90%;
+$preFontSize: 0.66em;
+$linkDecoration: underline;
+$textBackgroundColor: rgba($backgroundColor,20%);
+$backgroundImage: url('');
