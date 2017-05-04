@@ -3,4 +3,4 @@
 README.*
 examples/
 
-
+^\.travis\.yml$
