@@ -157,7 +157,7 @@ body {
   width: 90%;
   margin: 20px auto;
   text-align: left;
-  font-size: 0.66em;
+  font-size: 1em;
   font-family: monospace;
   line-height: 1.2em;
   word-wrap: break-word;
@@ -305,7 +305,7 @@ body {
   background-image: url("");
   background-position: left bottom;
   background-repeat: no-repeat;
-  padding: 20px; }
+  padding: 20px 20px 20px 20px; }
 
 .reveal p {
   font-weight: 300;
