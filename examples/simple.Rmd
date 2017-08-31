@@ -2,6 +2,7 @@
 title: "Untitled"
 output: 
   revealjs::revealjs_presentation:
+    theme: lockedata
     self_contained: false
     reveal_plugins: ["search", "zoom", "notes", "chalkboard", "menu"]
     reveal_options:
@@ -44,3 +45,4 @@ summary(cars)
 plot(pressure)
 ```
 
+## testing {.quote}
