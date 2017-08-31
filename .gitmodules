@@ -1,3 +1,3 @@
 [submodule "inst/revealjs"]
 	path = inst/revealjs
-	url = git@github.com:lockedata/reveal.js.git
+	url = https://github.com/lockedata/reveal.js.git
