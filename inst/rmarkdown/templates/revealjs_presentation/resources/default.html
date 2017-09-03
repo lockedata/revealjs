@@ -17,13 +17,10 @@ $endif$
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="$revealjs-url$/css/reveal.css">
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      .smallcaps{font-variant: small-caps;}
+  <style type="text/css">code{white-space: pre;}</style>
 $if(quotes)$
-      q { quotes: "“" "”" "‘" "’"; }
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
 $endif$
-  </style>
 $if(highlighting-css)$
   <style type="text/css">
 $highlighting-css$
@@ -66,13 +63,13 @@ $if(title)$
 <section>
   <h1 class="title">$title$</h1>
 $if(subtitle)$
-  <p class="subtitle">$subtitle$</p>
+  <h1 class="subtitle">$subtitle$</h1>
 $endif$
 $for(author)$
-  <p class="author">$author$</p>
+  <h2 class="author">$author$</h2>
 $endfor$
 $if(date)$
-  <p class="date">$date$</p>
+  <h3 class="date">$date$</h3>
 $endif$
 </section>
 $endif$
@@ -106,11 +103,9 @@ $if(slideNumber)$
         // Display the page number of the current slide
         slideNumber: $slideNumber$,
 $endif$
-        // Push each slide change to the browser history
 $if(history)$
+        // Push each slide change to the browser history
         history: $history$,
-$else$
-        history: true,
 $endif$
 $if(keyboard)$
         // Enable keyboard shortcuts for navigation
@@ -193,7 +188,7 @@ $if(viewDistance)$
         viewDistance: $viewDistance$,
 $endif$
 $if(parallaxBackgroundImage)$
-       // Parallax background image
+        // Parallax background image
         parallaxBackgroundImage: '$parallaxBackgroundImage$', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 $endif$
 $if(parallaxBackgroundSize)$
@@ -233,10 +228,6 @@ $endif$
         dependencies: [
           { src: '$revealjs-url$/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: '$revealjs-url$/plugin/zoom-js/zoom.js', async: true },
-    $if(notes-server)$
-          { src: '$revealjs-url$/socket.io/socker.io.js', async: true },
-          { src: '$revealjs-url$/plugin/notes-server/client.js', async: true },
-    $endif$
           { src: '$revealjs-url$/plugin/notes/notes.js', async: true }
         ]
       });
